@@ -1,7 +1,7 @@
 describe("test contact us form via automation test store", () => {
 
-    it("should be able to submit a succesful submission via contact us form", () => {
-        cy.visit("https://automationteststore.com/")
+    it.only("should be able to submit a succesful submission via contact us form", () => {
+        cy.visit("/") //visits the base URL
         cy.xpath('//a[contains(@href,"/contact")]').click().then(function(linkText) {
             cy.log(linkText.text())
         })

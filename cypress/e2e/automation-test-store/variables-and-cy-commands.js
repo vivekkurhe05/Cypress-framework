@@ -1,7 +1,7 @@
 describe("Verifying variables, cypress commands, and jquery commands", () => {
 
     it("Navigating to specific product pages", () => {
-        cy.visit("https://automationteststore.com/")
+        cy.visit("/")
 
         // This might fail because the order of execution is not guaranteee
         const makeupLink = cy.get("a[href*='product/category&path=']").contains("Makeup")
@@ -11,7 +11,7 @@ describe("Verifying variables, cypress commands, and jquery commands", () => {
     })
 
     it("Navigating to specific product pages", () => {
-        cy.visit("https://automationteststore.com/")
+        cy.visit("/")
         cy.get("a[href*='product/category&path=']").contains("Makeup").click()
 
         // The following code will fail
