@@ -28,7 +28,9 @@ describe("Handle js alerts", () => {
     it("Validate js confirm alert box works correctly when clicking cancel", () => {
         cy.visit("https://webdriveruniversity.com")
         cy.get('#popup-alerts').invoke('removeAttr','target').click({force:true})
-        cy.get('#button4').click()
+        cy.get('#button4').trigger('click')
+        // or
+        // cy.get('#button4').click()
         
         // assert alert text in Cypress using 'on' event listener
         cy.on('window:confirm', () => {
