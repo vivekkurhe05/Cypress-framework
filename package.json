@@ -4,13 +4,13 @@
   "description": "Cypress Framework",
   "main": "index.js",
   "scripts": {
-    "open": "sudo npx cypress open",
-    "open-auto-reload-off": "sudo npx cypress open --config watchForFileChanges=false",
-    "test": "sudo cypress run",
-    "test:chrome:headless": "sudo npx cypress run --browser chrome",
-    "test:firefox:headless": "sudo npx cypress run --browser firefox",
-    "test:chrome:headed": "sudo npx cypress run --browser chrome --headed",
-    "test:firefox:headed": "sudo npx cypress run --browser firefox --headed"
+    "open": "npx cypress open",
+    "open-auto-reload-off": "npx cypress open --config watchForFileChanges=false",
+    "test": "cypress run",
+    "test:chrome:headless": "npx cypress run --browser chrome",
+    "test:firefox:headless": "npx cypress run --browser firefox",
+    "test:chrome:headed": "npx cypress run --browser chrome --headed",
+    "test:firefox:headed": "npx cypress run --browser firefox --headed"
   },
   "author": "Vivek Kurhe",
   "license": "ISC",
