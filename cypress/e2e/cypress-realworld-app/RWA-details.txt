@@ -1,0 +1,2 @@
+Open Cypress-realworld-app-project
+run -> yarn dev (to start server)
