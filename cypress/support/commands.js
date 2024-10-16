@@ -31,3 +31,11 @@ Cypress.Commands.add('getIframeBody', (sel) => {
     .should('not.be.empty')
     .then(cy.wrap)
 })
+
+Cypress.Commands.add('selectProduct', (productName) => {
+    cy.get(".fixed_wrapper .prdocutname").each(($el, index, $list) => {
+        if($el.text().includes(productName)) {
+            cy.wrap($el).click()
+        }
+    })
+})
