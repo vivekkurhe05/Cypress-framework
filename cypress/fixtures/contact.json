@@ -2,6 +2,6 @@
     "first_name": "Jane",
     "last_name": "Doe",
     "email": "jana.doe@gmail.com",
-    "message": "Hi Vivek, How are you doing?",
+    "comment": "Hi Vivek, How are you doing?",
     "body": "Fixtures are a great way to mock data for responses to routes"
 }

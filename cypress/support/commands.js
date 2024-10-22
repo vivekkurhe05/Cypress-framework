@@ -32,10 +32,19 @@ Cypress.Commands.add('getIframeBody', (sel) => {
     .then(cy.wrap)
 })
 
+// e2e/automation-test-store/custom-command-usage.js
 Cypress.Commands.add('selectProduct', (productName) => {
     cy.get(".fixed_wrapper .prdocutname").each(($el, index, $list) => {
         if($el.text().includes(productName)) {
             cy.wrap($el).click()
+        }
+    })
+})
+
+Cypress.Commands.add('addProductsToBasket', (productName) => {
+    cy.get(".fixed_wrapper .prdocutname").each(($el, index, $list) => {
+        if($el.text() === productName) {
+            cy.get('.productcart').eq(index).click()
         }
     })
 })
